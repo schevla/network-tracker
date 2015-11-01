@@ -12,6 +12,6 @@ These scripts can be used to track a whether network device is on the network. R
 
 `send.sh` sends message to IRC chatroom on [freenode.net](freenode.net).
 
-##Known Bugs
+##Known Issues
 
 `specProbe.py continues running after `master.sh` is terminated and needs to be killed manually.
