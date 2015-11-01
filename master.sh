@@ -26,6 +26,6 @@ arp-scan -I <primary wireless device> -r 3 192.168.1.0/24 > hosts.txt
 python specProbe.py $mface $mac $ap $code & # manually kill the python process after script is halted
 
 # run active bash pinger
-bash specPing.sh $mac $rand_l $rand_u &> /dev/null
+bash specPing.sh $mac $rand_l $rand_u $code &> /dev/null
 
 wait

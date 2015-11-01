@@ -7,6 +7,7 @@
 tmac=$1 # target mac passed as argument
 rand_l=$2 # lower random time - minutes
 rand_u=$3 # upper random time - minutes
+code=$4 # codename for target
 
 # scan subnet for IP/MAC of target and ping to add to arp table
 ping `grep -i $tmac hosts.txt | awk '{print $1}'` -c 3 &> /dev/null
@@ -36,7 +37,7 @@ do
 	
 	# send condition to IRC - later
 	msg=`head specInd.txt`
-	msg="rocker is neigh: $msg"
+	msg=""$code" is neigh: $msg"
 	bash send.sh "$msg"
 	echo "$msg"
 	echo
